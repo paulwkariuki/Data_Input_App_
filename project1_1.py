@@ -337,8 +337,13 @@ with tab2:
                 time.sleep(8)
                 save_uploaded_question_file(uploaded_qfile)
             st.success("Thankyou so much for your feedback. \nWe are glad you are enjoying the experience with our app. ")
+            st.download_button("Download video",
+                              data=uploaded_qfile,
+                              file_name="video.mp4"
+                              mime="mp4")
         else:
             st.warning("File not uploaded! Please upload a file to submit.")
+
 
 
 
